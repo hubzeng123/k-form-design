@@ -23,8 +23,9 @@
   },
   "main": "lib/k-form-design.umd.min.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "set NODE_OPTIONS=--openssl-legacy-provider & vue-cli-service serve",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider & vue-cli-service build",
+    "build:report": "set NODE_OPTIONS=--openssl-legacy-provider & vue-cli-service build --report",
     "lib": "vue-cli-service build --target lib --name k-form-design --dest lib packages/index.js && npm run mini",
     "lint-fix": "eslint --fix --ext .js --ext .jsx --ext .vue packages/",
     "mini": "vue-cli-service build --target lib --name k-form-design-mini --dest lib packages/mini.js --no-clean",
